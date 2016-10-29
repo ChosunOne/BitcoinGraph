@@ -2,12 +2,14 @@ Bitcoin Graph Documentation
 By Josiah Evans
 
 #Dependencies:  
-        Django (1.10.2)
-		Blockchain (1.3.3) – For retrieving address and transactions
-		Decorator (4.0.10)
-		Networkx (1.11) – For representing the graphs
-		Pip (8.1.1)
-		Setuptools (20.10.1)
+        blockchain==1.3.3 – For retrieving address and transactions
+        decorator==4.0.10
+        dj-database-url==0.4.1
+        Django==1.10.2
+        gunicorn==19.6.0
+        networkx==1.11 – For representing the graphs
+        psycopg2==2.6.2
+        whitenoise==3.2.2
 
 #Usage:  
 Visit https://bitcoingraph.herokuapp.com to start using the app.
