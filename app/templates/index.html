@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.css' %}"/>
+    <script src="{% static 'app/scripts/d3.js' %}"></script>
+    <script src="{% static 'app/scripts/graph.js' %}"></script>
+</head>
+<body>
+    {% block content %}
+
+<div class="jumbotron">
+    <p class="lead">Requested Bitcoin Address: {{bitcoin_address}}</p>
+</div>
+
+
+<p>Bitcoin Address to Load:
+    <input id="request-address" type="text" value="{{bitcoin_address}}"/>
+    Maximum Transactions per Node:
+    <input id="max_tx" type="text" value="{{max_tx}}"/>
+    Maximum Depth Limit:
+    <input id="depth_limit" type="text" value="{{depth_limit}}"/>
+    Maximum Branching per Node:
+    <input id="branch_limit" type="text" value="{{branch_limit}}"/>
+    <button id="load-address" onclick="loadAddress()">Load</button>
+
+</p>
+
+
+<svg width="1200" height="960"></svg>
+
+<div id="graph-json" hidden>
+    {{graph_json}}
+</div>
+
+    <div id="address" hidden>{{bitcoin_address}}</div>
+</body>
+</html>
+{% endblock %}
