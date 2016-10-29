@@ -9,12 +9,8 @@ By Josiah Evans
 		Pip (8.1.1)
 		Setuptools (20.10.1)
 
-#Installation:  
-        Unzip the file and change directory into the unzipped file
-        run ‘“env/Scripts/python.exe” manage.py runserver’ to start the server
-        navigate to “localhost:8000” in your browser
-
 #Usage:  
+Visit https://bitcoingraph.herokuapp.com to start using the app
 Specify the Bitcoin Address, maximum number of transactions, maximum depth, and maximum branching for the graph and hit load.  You may need to wait a few minutes depending on the given parameters (this is due to many api calls to blockchain.info).  
 
 When the graph loads, the larger circle represents the address you have specified.  The other circles represent transactions of bitcoins that have gone through the specified address.  Green links indicate they are moving bitcoins toward the specified address, and red links indicate bitcoins moving away from the specified address.  The width of the links between transactions represents the value of the transaction.  Specifically, the thickness indicates the order of magnitude of the value.
